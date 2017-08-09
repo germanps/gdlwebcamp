@@ -109,6 +109,107 @@ textarea {
 
 */
 
+html{
+    box-sizing: border-box;
+}
+*, *::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--concrete);
+    font-size: 16px;
+}
+h2{
+    font-family: var(--oswald);
+}
+
+/* ====== HEADER ====== */
+.site-header{
+    .hero{
+        background-image: url(../img/encabezado.jpg);
+        background-position: top center;
+        background-size: cover;
+        height: 100vh;
+    }
+    .content-header{
+        padding-top: 2.5rem;
+
+        .social{
+            text-align: center;
+
+            a{
+                color: var(--white);
+                font-size: 2rem;
+                margin-right: 1rem;
+
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+
+            @media(--tablet) {
+                &{
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .info-event{
+            text-align: center;
+            color: var(--white);
+
+            p{
+                margin: 0;
+                display: inline;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+
+                i{
+                    color: var(--vermilion);
+                    font-size: 2.5rem;
+                }
+
+                &.date{
+                    float: left;
+                }
+                &.city{
+                    float: right;
+                    text-align: right;
+                }
+            }
+
+            @media(--tablet) {
+                &{
+                    width: 70%;
+                    margin: 0 auto;
+                    margin-top: 3rem;
+                }
+            }
+
+            .site-name{
+                font-family: var(--ptsans);
+                font-size: 8vw;
+                text-transform: uppercase;
+
+                @media(--tablet){
+                    &{
+                        font-size: 11.5vw;
+                        margin: 0;
+                        line-height: 1;
+                    }
+                }
+            }
+            .slogan{
+                text-transform: none;
+
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
 
 
 

@@ -1,9 +1,16 @@
 :root {
+	/*Colors*/
+	--white: #ffffff;
 	--concrete: #f2f2f2;
+	--vermilion: #FE4918;
+	/*Fonts*/
+	--oswald: 'Oswald', sans-serif;
+	--ptsans: 'PT Sans', sans-serif;
+	--opensans: 'Open Sans', sans-serif;;
 }
 
 /*  ============ Custom media queries ============ */
-@custom-media --mobile (max-width: 480px);
-@custom-media --tablet (max-width: 768px);
-@custom-media --desktop (max-width: 992px);
+@custom-media --mobile (min-width: 480px);
+@custom-media --tablet (min-width: 768px);
+@custom-media --desktop (min-width: 992px);
 @custom-media --retina (-webkit-min-device-pixel-ratio: 2);
