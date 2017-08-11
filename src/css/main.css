@@ -119,9 +119,40 @@ body{
     background-color: var(--concrete);
     font-size: 16px;
 }
+/* ====== GLOBALES ====== */
+
 h2{
     font-family: var(--oswald);
 }
+
+.container{
+    width: 98%;
+    margin: 0 auto;
+
+    @media(--mobile) {
+       &{
+        width: 95%;
+        margin: 0 auto;
+       }
+    }
+    @media(--tablet) {
+       &{
+        width: 90%;
+        margin: 0 auto;
+       }
+    }
+    @media(--desktop) {
+       &{
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1100px;
+       }
+    }
+}
+ 
+
+
+
 
 /* ====== HEADER ====== */
 .site-header{
@@ -166,7 +197,8 @@ h2{
 
                 i{
                     color: var(--vermilion);
-                    font-size: 2.5rem;
+                    font-size: 2rem;
+                    padding-right: .5rem;
                 }
 
                 &.date{
@@ -210,9 +242,42 @@ h2{
     }
 }
 
+/* ====== MENU-BAR ====== */
+
+.menu-bar{
+    background-color: var(--mineshaft);
+    padding: 1.5rem 0;
+
+    .logo{
+        width: 80%;
+        
+        @media(--tablet){
+            &{
+                width: 33%;
+                float: left;
+            }
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    /*main-navigation*/
+    .main-navigation{
+        display: none;
+
+        @media(--tablet){
+            &{
+                width: 67%;
+                float: right;
+                display: block;
+            }
+        }
+    }
 
 
-
+}
 
 
 
