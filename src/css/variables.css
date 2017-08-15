@@ -4,7 +4,9 @@
 	--black: #000000;
 	--concrete: #f2f2f2;
 	--vermilion: #FE4918;
+	--grenadier: #E33000;
 	--mineshaft: #353535;
+	--opacity: rgba(255, 255, 255, .8);
 
 	/*Fonts*/
 	--oswald: 'Oswald', sans-serif;

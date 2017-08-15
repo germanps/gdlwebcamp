@@ -135,6 +135,12 @@ h2:after{
     width: 100px;
     display: block;
 }
+h3{
+    font-size: 1.3rem;
+    color: var(--vermilion);
+    font-family: var(--ptsans);
+}
+
 
 .wrapper{
     padding: 2.5rem 0;
@@ -168,7 +174,20 @@ h2:after{
        }
     }
 }
- 
+
+@define-mixin btn $bg, $color, $font, $size{
+    background-color: $bg;
+    color: $color;
+    font-family: $font;
+    font-size: $size;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: .2s all ease;
+}
 
 
 
@@ -356,9 +375,126 @@ h2:after{
             display: block;
         }
     }
-
-
 }
+
+
+/* ====== Programs & workshops ====== */
+.programs-wrapper{
+    position: relative;
+    
+    .video-content{
+        overflow-x:hidden;
+        max-width: 100%;
+    }
+
+    .program-content{
+        position: absolute;
+        top: 0;
+        left:0;
+        height: 100%;
+        width: 100%;
+
+        .program-event{
+            background-color: var(--opacity);
+            padding: 1.5rem;
+            margin-top: 5rem;
+
+            @media(--tablet){
+                &{
+                    width: 70%;
+                }
+            }
+            @media(--desktop){
+                &{
+                    width: 50%;
+                }
+            }
+            
+            /*Menú programa*/
+            .menu-program{
+                width: 100%;
+                border-bottom: 2px solid var(--vermilion);
+                padding-bottom: 1rem;
+
+                @media(--tablet){
+                    &{
+                        display: table;
+                    }
+                }
+
+                a{
+                    display: block;
+                    text-align: center;
+                    color: var(--black);
+                    text-decoration: none;
+                    font-family: var(--oswald);
+                    margin-bottom: .8rem;
+                    font-size: 1.2rem;
+
+                    @media(--tablet){
+                        &{
+                            display: table-cell;
+                        }
+                    }
+
+                    i{
+                        color: var(--vermilion);
+                        font-size: 1.5rem;
+                        margin-right: .8rem;
+                    }
+                }
+            }
+            
+            .info-course{
+
+                .detall-event{
+                    margin-top: 2rem;
+                    border-bottom: 1px solid var(--black);
+                    padding: 0 2rem;
+
+                    &:nth-child(2){
+                        border-bottom: none;
+                    }
+
+                    p{
+                        margin-bottom: 1.2rem;
+                        font-size: 1.2rem;
+
+                        i{
+                            color: var(--vermilion);
+                            font-size: 1.5rem;
+                            margin-right: .8rem;
+                        }
+                    }
+                }
+
+                .button{
+                    @mixin btn var(--vermilion), var(--white), var(--oswald), 1rem;
+
+                    &:hover{
+                        background-color: var(--grenadier); 
+                    }
+                }
+            }
+        }
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -435,6 +571,18 @@ h2:after{
 .clearfix:after {
     clear: both;
 }
+
+.float-right{
+    float: right;
+}
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
