@@ -904,6 +904,39 @@ h3{
 
 
 
+/************* Reservas *************/
+.reservation{
+
+
+
+
+
+
+
+
+
+
+    .button{
+        @mixin btn var(--vermilion), var(--white), var(--oswald), 1rem;
+        border: 1px solid var(--vermilion);
+
+        &:hover{
+            background-color: var(--grenadier); 
+        }
+        &.transparent{
+            background-color: transparent;
+            border: 1px solid var(--white);
+            
+            &:hover{
+                background-color: var(--vermilion);
+                border-color: var(--vermilion)
+            }
+        }
+    }
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
