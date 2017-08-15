@@ -6,7 +6,11 @@
 	--vermilion: #FE4918;
 	--grenadier: #E33000;
 	--mineshaft: #353535;
-	--opacity: rgba(255, 255, 255, .8);
+	--mercury: #e1e1e1;
+	--abbey: #2e2e2e;
+	--gray: #868686;
+	--opaWhite: rgba(255, 255, 255, .8);
+	--opaBlack: rgba(0, 0, 0, .55);
 
 	/*Fonts*/
 	--oswald: 'Oswald', sans-serif;
