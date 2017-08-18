@@ -1,5 +1,41 @@
+
+var api = 'AIzaSyDLh29qSZwYCWUdqGtGIpHWD-5VMgyOIp0';
+
+function initMap() {
+
+	var latLng = {
+		lat: 41.3850639,
+		lng: 2.1734034999999494
+	}
+
+   var map = new google.maps.Map(document.getElementById('mapa'), {
+		'center': latLng,
+		'scrollwheel': false,
+		'zoom': 14,
+		'mapTypeId': google.maps.MapTypeId.ROADMAP
+	});
+
+    var content = '<h2> GDLWEBCAM </h2>' +
+    			  '<p>Del 10 al 12 de Diciembre</p>' + 
+    			  '<p>Visitanos!</p>';
+
+  	var marker = new google.maps.Marker({
+	   	position: latLng,
+	   	map: map,
+	   	title: 'GDLWEBCAM'
+    });
+
+    var info = new google.maps.InfoWindow({
+    	content: content
+    });
+
+    marker.addListener('click', function(){
+    	info.open(map, marker)
+    });
+}
+
 (function(){
-	"use strict";
+	"use strict";	
 
 	var gift = document.getElementById('gift');
 
@@ -134,3 +170,4 @@
 
 	}); // DOM CONTENT LOADED
 })();
+
