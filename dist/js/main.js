@@ -171,3 +171,16 @@ function initMap() {
 	}); // DOM CONTENT LOADED
 })();
 
+
+jQuery(document).ready(function($) {
+	//Programa de Conferencias
+	$('.program-event .info-course:first').show();
+	$('.menu-program a').on('click', function(e) {
+		$('.menu-program a').removeClass('active');
+		$(this).addClass('active');
+		$('.hiden').hide();
+		var enlace = $(this).attr('href');
+		$(enlace).fadeIn(500);
+		return false;
+	});
+});

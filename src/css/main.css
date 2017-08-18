@@ -426,12 +426,15 @@ h3{
                     width: 50%;
                 }
             }
+
+            .hiden{
+                display: none;
+            }
             
             /*Menú programa*/
             .menu-program{
                 width: 100%;
-                border-bottom: 2px solid var(--vermilion);
-                padding-bottom: 1rem;
+                              
 
                 @media(--tablet){
                     &{
@@ -447,6 +450,9 @@ h3{
                     font-family: var(--oswald);
                     margin-bottom: .8rem;
                     font-size: 1.2rem;
+                    position: relative;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid var(--vermilion);
 
                     @media(--tablet){
                         &{
@@ -458,6 +464,21 @@ h3{
                         color: var(--vermilion);
                         font-size: 1.5rem;
                         margin-right: .8rem;
+                    }
+
+                    &.active::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -20px;
+                        margin-right: auto;
+                        margin-left: auto;
+                        height: 20px;
+                        width: 30px;
+                        background-image: url('../img/talleres-flecha.jpg');
+                        background-position: top center;
+                        background-repeat: no-repeat;
                     }
                 }
             }
