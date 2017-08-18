@@ -907,11 +907,171 @@ h3{
 /************* Reservas *************/
 .reservation{
 
+    h3{
+        text-align: center;
+        text-transform: uppercase;
+        margin: 20px 0 0 0;
+    }
+    label{
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    h4{
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--vermilion);
+        padding-bottom: .8rem;
+        font-size: 1.2rem;
+    }
+    .box{
+        background-color: var(--white);
+        border: 1px solid var(--mercury);
+        padding: .8rem;
+        margin: .8rem;
+    }
+    .field{
+        padding: 1.8rem;
+        @media(--tablet){
+            &{
+                float: left;
+                width: 33.3%;
+            }
+        }
+        #error{
+            clear: both;
+            color: red;
+            font-size: .8rem;
+        }
+    }
 
+    .packages{
 
+        .prices-table{
+            border-color: var(--mercury);
 
+            &:hover{
+                transform:none !important;
+                box-shadow: none !important;
+            }
 
+            input{
+                clear: both;
+                width: 100px;
+                display: block;
+                margin:1rem auto;
+            }
+        }
+    }
+    
+    .events{
+        
+        .content-day{
+            padding: 1.8rem;
+            display: none;
 
+            .day-event{
+
+                @media(--tablet){
+                    &{
+                        float: left;
+                        width: 33.3%;
+                    }
+                }
+                p{
+                    text-align: left;
+                }
+                label{
+                    display: block;
+                    margin-bottom: .8rem;
+                    font-weight: normal;
+
+                    time{
+                        color: var(--vermilion);
+                        font-weight: bold;
+                    }
+                }
+                input{
+                    margin-right: .8rem;
+
+                }
+
+            }
+        }
+    }
+
+    .resume{
+
+        p{
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .box{
+
+            .extras{
+                float: left;
+                width: 50%;
+                padding: 1.8rem;
+
+                .order{
+                    text-align: left;
+                    margin-bottom: .8rem;
+
+                    input{
+                        margin: .8rem 0 0 0;
+                    }
+                    .gift{
+                        display: block;
+                    }
+                }
+            }
+
+            .total{
+                float: right;
+                width: 50%;
+                padding: 1.8rem;
+
+                p{
+                    text-align: center;
+                }
+
+                #productsList{
+                    background-color: var(--mineshaft);
+                    color: var(--mercury);
+                    padding: .5rem;
+                    display: none;
+
+                    span{
+                        display: block;
+
+                        &::before{
+                            content: '\f00c';
+                            font-family: 'FontAwesome';
+                            display: inline-block;
+                            vertical-align: middle;
+                            padding: 0 5px;
+                            font-size: 1.2rem;
+                            color: var(--vermilion);
+                            -webkit-font-smoothing: antialiased;
+                        }
+                    }
+                }
+
+                #totalAmount{
+                    text-align: center;
+                    font-size: 2rem;
+                    color: var(--vermilion);
+                    font-weight: bold;
+                    font-family: var(--opensans);
+                }
+            }
+        }
+        
+        input{
+            display: block;
+            margin: 1.5rem auto 0;
+        }
+    }
 
 
 
