@@ -172,7 +172,7 @@ function initMap() {
 })();
 
 
-jQuery(document).ready(function($) {
+$(function() {
 	//Programa de Conferencias
 	$('.program-event .info-course:first').show();
 	$('.menu-program a').on('click', function(e) {
@@ -183,4 +183,12 @@ jQuery(document).ready(function($) {
 		$(enlace).fadeIn(500);
 		return false;
 	});
+
+	$('.summary-event li:nth-child(1) p').animateNumber({ number: 6}, 1500);
+	$('.summary-event li:nth-child(2) p').animateNumber({ number: 15}, 1500);
+	$('.summary-event li:nth-child(3) p').animateNumber({ number: 3}, 1500);
+	$('.summary-event li:nth-child(4) p').animateNumber({ number: 9}, 1500);
 });
+
+
+//Animaciones números
