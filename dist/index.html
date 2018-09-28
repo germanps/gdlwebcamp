@@ -9,7 +9,14 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
+
+        <!-- Leaflet Maps -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" />
+        
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <style>
+            #map{height: 450px;}
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -179,10 +186,10 @@
         <div class="counter parallax">
             <div class="container">
                 <ul class="summary-event clearfix">
-                    <li><p class="number">6</p> Invitados</li>
-                    <li><p class="number">15</p> Talleres</li>
-                    <li><p class="number">3</p> Días</li>
-                    <li><p class="number">9</p> Conferencias</li>
+                    <li><p class="number"></p> Invitados</li>
+                    <li><p class="number"></p> Talleres</li>
+                    <li><p class="number"></p> Días</li>
+                    <li><p class="number"></p> Conferencias</li>
                 </ul>
             </div>
         </div>
@@ -233,9 +240,11 @@
         </section> <!-- end .prices-->
 
         <!-- Sección Mapa -->
-        <div id="mapa" class="map">
+        <<!-- div id="mapa" class="map">
             
-        </div> <!-- end sección mapa -->
+        </div> --> <!-- end sección mapa -->
+        
+        <div id="map"></div>
 
         <!-- Seccíon Testimonios -->
         <section class="wrapper">
@@ -329,9 +338,13 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src="js/vendor/jquery.animateNumber.min.js"></script>
+        <!-- Leaflet maps -->
+        <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+
         <script src="js/main.js"></script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkbPqGH4m22UEnGyoFZyh38ocHZ3gzAkg&callback=initMap" async defer></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkbPqGH4m22UEnGyoFZyh38ocHZ3gzAkg&callback=initMap" async defer></script> -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

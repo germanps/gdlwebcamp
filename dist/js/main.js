@@ -1,5 +1,6 @@
 
-var api = 'AIzaSyDLh29qSZwYCWUdqGtGIpHWD-5VMgyOIp0';
+/*var api = 'AIzaSyDLh29qSZwYCWUdqGtGIpHWD-5VMgyOIp0';*/
+var api = 'AIzaSyBBHcAYUhPU4sumiOdsXCwx7azX7u1Fzcs';
 
 function initMap() {
 
@@ -33,13 +34,29 @@ function initMap() {
     	info.open(map, marker)
     });
 }
+window.addEventListener('DOMContentLoaded', leafMap , false);
+function leafMap () {
+	/*LEAFMAP*/
+	var map = L.map('map').setView([41.566168056838926, 1.819612975678183], 12);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	L.marker([41.566168056838926, 1.819612975678183]).addTo(map).bindPopup('GDLWEBCAM 2018.<br> Entradas disponibles.').openPopup().bindTooltip('Collbató, Catalunya').openTooltip();
+
+	/**********************/
+}
 
 (function(){
 	"use strict";	
 
+	//init map
+
 	var gift = document.getElementById('gift');
 
 	document.addEventListener('DOMContentLoaded', function(){
+
 		//console.log('entra');
 		//Campos datos usuarios
 		var name = document.getElementById('name');
@@ -63,16 +80,21 @@ function initMap() {
 		var tshirt = document.getElementById('tshirt')
 
 		//Listeners
-		calculate.addEventListener('click', calculateAmount);
-		oneDayPass.addEventListener('blur', showDays); //evento quitar foco
-		twoDaysPass.addEventListener('blur', showDays); //evento quitar foco
-		fullPass.addEventListener('blur', showDays); //evento quitar foco
+		try {
+			calculate.addEventListener('click', calculateAmount);
+			oneDayPass.addEventListener('blur', showDays); //evento quitar foco
+			twoDaysPass.addEventListener('blur', showDays); //evento quitar foco
+			fullPass.addEventListener('blur', showDays); //evento quitar foco
 
-		//Validations
-		name.addEventListener('blur', validateFields);
-		surname.addEventListener('blur', validateFields);
-		email.addEventListener('blur', validateFields);
-		email.addEventListener('blur', validateEmail);
+			//Validations
+			name.addEventListener('blur', validateFields);
+			surname.addEventListener('blur', validateFields);
+			email.addEventListener('blur', validateFields);
+			email.addEventListener('blur', validateEmail);
+		} catch(e) {
+
+		}
+		
 
 		//Functions
 		function validateEmail(e){
@@ -168,6 +190,8 @@ function initMap() {
 			}
 		}
 
+
+
 	}); // DOM CONTENT LOADED
 })();
 
@@ -183,4 +207,13 @@ jQuery(document).ready(function($) {
 		$(enlace).fadeIn(500);
 		return false;
 	});
+
+
+	//Animaciones números
+	$('.summary-event li:nth-child(1) p').animateNumber({ number: 6}, 1200);
+	$('.summary-event li:nth-child(2) p').animateNumber({ number: 15}, 1200);
+	$('.summary-event li:nth-child(3) p').animateNumber({ number: 3}, 1500);
+	$('.summary-event li:nth-child(4) p').animateNumber({ number: 9}, 1500);
 });
+
+
