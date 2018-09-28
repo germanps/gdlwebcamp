@@ -236,6 +236,23 @@ jQuery(document).ready(function($) {
 		$('#minutos').html(e.strftime('%M'));
 		$('#segundos').html(e.strftime('%S'));
 	});
+
+
+	//Barra Menú fija cuando scroll-down
+	var windowHeight = $(window).height();
+	var barraAltura = $('.menu-bar').innerHeight();
+	console.log(barraAltura);
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if(scroll > windowHeight){
+			$('.menu-bar').addClass('fixed-bar');
+			$('body').css({marginTop: barraAltura+'px'});
+		}else{
+			$('.menu-bar').removeClass('fixed-bar');
+			$('body').css({marginTop: '0px'});
+		}
+	});
+
 });
 
 
