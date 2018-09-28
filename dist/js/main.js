@@ -38,20 +38,22 @@ window.addEventListener('DOMContentLoaded', leafMap , false);
 function leafMap () {
 	/*LEAFMAP*/
 	//var map = L.map('map').setView([41.566168056838926, 1.819612975678183], 12);
+	var mapa = document.getElementById('map');
+	if(mapa){
+		var map = L.map('map', {
+			center: [41.566168056838926, 1.819612975678183],
+			zoom: 12,
+			dragging: true,
+			scrollWheelZoom: false,
+			opacity: 0.5
+		});
 
-	var map = L.map('map', {
-	    center: [41.566168056838926, 1.819612975678183],
-	    zoom: 12,
-	    dragging: true,
-	    scrollWheelZoom: false,
-	    opacity: 0.5
-	});
+		L.tileLayer('http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
 
-	L.tileLayer('http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
-	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-
-	L.marker([41.566168056838926, 1.819612975678183]).addTo(map).bindPopup('GDLWEBCAM 2018.<br> Entradas disponibles.').openPopup().bindTooltip('Collbató, Catalunya').openTooltip();
+		L.marker([41.566168056838926, 1.819612975678183]).addTo(map).bindPopup('GDLWEBCAM 2018.<br> Entradas disponibles.').openPopup().bindTooltip('Collbató, Catalunya').openTooltip();
+	}
 
 	/**********************/
 }
@@ -204,15 +206,11 @@ function leafMap () {
 })();
 
 
-<<<<<<< HEAD
 jQuery(document).ready(function($) {
 	//Lettering
 	$('.site-name').lettering();
 
 
-=======
-$(function() {
->>>>>>> 3eaea7e515de99859927fcb68e949843303eb2ec
 	//Programa de Conferencias
 	$('.program-event .info-course:first').show();
 	$('.menu-program a').on('click', function(e) {
@@ -224,7 +222,6 @@ $(function() {
 		return false;
 	});
 
-<<<<<<< HEAD
 
 	//Animaciones números
 	$('.summary-event li:nth-child(1) p').animateNumber({ number: 6}, 1200);
@@ -242,13 +239,3 @@ $(function() {
 });
 
 
-=======
-	$('.summary-event li:nth-child(1) p').animateNumber({ number: 6}, 1500);
-	$('.summary-event li:nth-child(2) p').animateNumber({ number: 15}, 1500);
-	$('.summary-event li:nth-child(3) p').animateNumber({ number: 3}, 1500);
-	$('.summary-event li:nth-child(4) p').animateNumber({ number: 9}, 1500);
-});
-
-
-//Animaciones números
->>>>>>> 3eaea7e515de99859927fcb68e949843303eb2ec

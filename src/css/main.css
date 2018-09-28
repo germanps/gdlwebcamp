@@ -12,6 +12,7 @@
 @import './normalize.css';
 @import './variables.css';
 @import './font-awesome.min.css';
+@import './lightbox.css';
 
 
 /* ==========================================================================
@@ -279,6 +280,49 @@ h3{
                 text-transform: uppercase;
                 span{
                     position: relative;
+                    text-shadow: 0 0 30px var(--black);
+                    @media(--desktop){
+                        &.char1{
+                            top: 20px;
+                            right: 0;
+                        }
+                        &.char2{
+                            top: 0;
+                            right:0;
+                        }
+                        &.char3{
+                            top: 10px;
+                            right: 10px;
+                        }
+                        &.char4{
+                            top: 5px;
+                            right: 10px;
+                        }
+                        &.char5{
+                            top: 20px;
+                            right: 10px;
+                        }
+                        &.char6{
+                            top: 5px;
+                            right: 10px;
+                        }
+                        &.char7{
+                            top: 20px;
+                            right: 10px;
+                        }
+                        &.char8{
+                            top: 0;
+                            right: 10px;
+                        }
+                        &.char9{
+                            top: 30px;
+                            right: 0;
+                        }
+                        &.char10{
+                            top: 5px;
+                            right: 10px;
+                        }
+                    }
                 }
 
                 @media(--tablet){
@@ -286,11 +330,13 @@ h3{
                         font-size: 11.5vw;
                         margin: 0;
                         line-height: 1;
+                        padding-bottom: 1rem;
                     }
                 }
             }
             .slogan{
                 text-transform: none;
+                font-family: var(--ptsans);
 
                 span{
                     font-weight: bold;
@@ -346,6 +392,9 @@ h3{
             display: block;
             text-align: center;
             margin-bottom: .5rem;
+            &.active{
+                border-bottom: 2px solid var(--vermilion); 
+            }
 
             @media(--tablet){
                 &{
@@ -405,6 +454,10 @@ h3{
     .video-content{
         overflow-x:hidden;
         max-width: 100%;
+        video{
+            width: 100%;
+            min-height: 880px;
+        }
     }
 
     .program-content{
