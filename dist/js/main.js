@@ -37,9 +37,17 @@ function initMap() {
 window.addEventListener('DOMContentLoaded', leafMap , false);
 function leafMap () {
 	/*LEAFMAP*/
-	var map = L.map('map').setView([41.566168056838926, 1.819612975678183], 12);
+	//var map = L.map('map').setView([41.566168056838926, 1.819612975678183], 12);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	var map = L.map('map', {
+	    center: [41.566168056838926, 1.819612975678183],
+	    zoom: 12,
+	    dragging: true,
+	    scrollWheelZoom: false,
+	    opacity: 0.5
+	});
+
+	L.tileLayer('http://{s}.tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
@@ -197,6 +205,10 @@ function leafMap () {
 
 
 jQuery(document).ready(function($) {
+	//Lettering
+	$('.site-name').lettering();
+
+
 	//Programa de Conferencias
 	$('.program-event .info-course:first').show();
 	$('.menu-program a').on('click', function(e) {
@@ -214,6 +226,14 @@ jQuery(document).ready(function($) {
 	$('.summary-event li:nth-child(2) p').animateNumber({ number: 15}, 1200);
 	$('.summary-event li:nth-child(3) p').animateNumber({ number: 3}, 1500);
 	$('.summary-event li:nth-child(4) p').animateNumber({ number: 9}, 1500);
+
+	//Final Countdown
+	$('.countdown').countdown('2018/12/10 09:00:00', function (e) {
+		$('#dias').html(e.strftime('%D'));
+		$('#horas').html(e.strftime('%H'));
+		$('#minutos').html(e.strftime('%M'));
+		$('#segundos').html(e.strftime('%S'));
+	});
 });
 
 

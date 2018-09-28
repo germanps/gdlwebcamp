@@ -277,6 +277,9 @@ h3{
                 font-family: var(--ptsans);
                 font-size: 8vw;
                 text-transform: uppercase;
+                span{
+                    position: relative;
+                }
 
                 @media(--tablet){
                     &{
