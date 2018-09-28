@@ -224,11 +224,21 @@ jQuery(document).ready(function($) {
 
 
 	//Animaciones números
-	$('.summary-event li:nth-child(1) p').animateNumber({ number: 6}, 1200);
-	$('.summary-event li:nth-child(2) p').animateNumber({ number: 15}, 1200);
-	$('.summary-event li:nth-child(3) p').animateNumber({ number: 3}, 1500);
-	$('.summary-event li:nth-child(4) p').animateNumber({ number: 9}, 1500);
+	var resumenLista = jQuery('.summary-event');
+	if(resumenLista.length > 0){
+		//detectar con waypoint que el div sumary-event está visible
+		$('.summary-event').waypoint(function() {
+			//Con animateNumber hacemos el efecto
+			$('.summary-event li:nth-child(1) p').animateNumber({ number: 6}, 1200);
+			$('.summary-event li:nth-child(2) p').animateNumber({ number: 15}, 1200);
+			$('.summary-event li:nth-child(3) p').animateNumber({ number: 3}, 1500);
+			$('.summary-event li:nth-child(4) p').animateNumber({ number: 9}, 1500);
 
+		}, {
+			offset: '60%'
+		});
+	}
+	
 	//Final Countdown
 	$('.countdown').countdown('2018/12/10 09:00:00', function (e) {
 		$('#dias').html(e.strftime('%D'));
@@ -251,6 +261,12 @@ jQuery(document).ready(function($) {
 			$('.menu-bar').removeClass('fixed-bar');
 			$('body').css({marginTop: '0px'});
 		}
+	});
+
+
+	//Menú responsive
+	$('.menu-mobile').on('click', function(){
+		$('.main-navigation').slideToggle();
 	});
 
 });
